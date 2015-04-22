@@ -24,6 +24,7 @@
         }
 
         $scope.onCustomerServed = function(){
+            console.log('onCustomerServed!');
             _getCustomers();
             _getServedCustomers()
         }
@@ -45,9 +46,14 @@
         // using a watch on change here rather than listening to the dispatching events
         $scope.$watch('service.getData()', function(newVal, oldVal) {
             if(newVal && newVal !== oldVal) {
-                _getCustomers();
+                _update();
             }
         });
+
+        function _update() {
+            _getCustomers();
+            _getServedCustomers();
+        }
     }
 
 

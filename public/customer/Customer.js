@@ -1,4 +1,4 @@
-(function () {
+(function() {
     angular.module('qudini.customer', [])
         .directive('customer', Customer);
 
@@ -8,32 +8,41 @@
      * - calculating queued time
      * - removing customer from the queue
      */
-    function Customer($http){
+    function Customer($http, CustomerService) {
 
-        return{
+        return {
             restrict: 'E',
-            scope:{
+            scope: {
                 customer: '=',
-
                 onRemoved: '&',
                 onServed: '&'
             },
             templateUrl: '/customer/customer.html',
-            link: function(scope){
+            link: function(scope) {
 
+                // calculate how long the customer has queued for
+                var queuedTime = new Date() - new Date(scope.customer.joinedTime);
 
-               // calculate how long the customer has queued for
-                scope.queuedTime = new Date() - new Date(scope.customer.joinedTime);
+                // use Moment.js to help with displaying the waiting time
+                scope.queuedTime = moment.duration(queuedTime);
 
-                scope.remove = function(){
+                // removes the customer from the queue
+                scope.remove = function() {
                     $http({
                         method: 'DELETE',
                         url: '/api/customer/remove',
                         params: {id: scope.customer.id}
-                    }).then(function(res){
+                    }).then(function(res) {
                         scope.onRemoved()()
                     })
                 };
+
+                // serves the customer
+                scope.serve = function() {
+                    $http.post('/api/customer/serve', scope.customer).then(function(res) {
+                        scope.onServed()(); // note double parenthesis
+                    });
+                }
             }
         }
     }

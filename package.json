@@ -1,0 +1,32 @@
+{
+  "name": "front-end-test",
+  "version": "0.0.1",
+  "description": "An Angular FED test",
+  "main": "server.js",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "gulp-run": "^1.6.7",
+    "node-static": "^0.7.6",
+    "node-uuid": "^1.4.3",
+    "gulp-serve": "^0.3.1"
+  },
+  "devDependencies": {
+    "moment": "^2.10.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/russellf9/front-end-test.git"
+  },
+  "author": "russell@factornine.co.uk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/russellf9/front-end-test/issues"
+  },
+  "homepage": "https://github.com/russellf9/front-end-test"
+}
