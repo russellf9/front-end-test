@@ -1,6 +1,6 @@
 (function () {
-    angular.module('qudini.QueueApp', [])
-        .directive('customer', Customer)
+    angular.module('qudini.customer', [])
+        .directive('customer', Customer);
 
     /**
      * The <customer> directive is responsible for:
@@ -21,7 +21,8 @@
             templateUrl: '/customer/customer.html',
             link: function(scope){
 
-                // calculate how long the customer has queued for
+
+               // calculate how long the customer has queued for
                 scope.queuedTime = new Date() - new Date(scope.customer.joinedTime);
 
                 scope.remove = function(){
@@ -37,5 +38,5 @@
         }
     }
 
-})()
+})();
 

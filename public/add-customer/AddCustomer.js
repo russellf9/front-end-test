@@ -1,5 +1,5 @@
 (function () {
-    angular.module('qudini.QueueApp')
+    angular.module('qudini.customer')
         .directive('addCustomer', AddCustomer)
 
 
@@ -11,6 +11,8 @@
             },
             templateUrl:'/add-customer/add-customer.html',
             link: function(scope){
+
+                console.log('addCustomer!');
 
                 scope.products = [
                     {name: 'Grammatical advice'},

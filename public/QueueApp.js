@@ -1,7 +1,8 @@
 (function () {
 
-    angular.module('qudini.QueueApp', [])
-        .controller('QueueCtrl', QueueCtrl)
+    angular.module('qudini.QueueApp', ['qudini.customer'])
+        .controller('QueueCtrl', QueueCtrl);
+
 
     /**
      * Bonus points - manipulating the without waiting for the
@@ -41,5 +42,5 @@
     }
 
 
-})()
+})();
 
