@@ -8,7 +8,7 @@
      * Bonus points - manipulating the without waiting for the
      * server request
      */
-    function QueueCtrl($scope, $http) {
+    function QueueCtrl($scope, $http, CustomerService) {
 
         $scope.customers = [];
         $scope.customersServed = [];
@@ -39,8 +39,18 @@
                 $scope.customers = res.data;
             })
         }
+
+        $scope.service = CustomerService;
+
+        // using a watch on change here rather than listening to the dispatching events
+        $scope.$watch('service.getData()', function(newVal, oldVal) {
+            if(newVal && newVal !== oldVal) {
+                _getCustomers();
+            }
+        });
     }
 
 
 })();
+
 
