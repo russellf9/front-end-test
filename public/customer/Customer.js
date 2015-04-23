@@ -8,7 +8,7 @@
      * - calculating queued time
      * - removing customer from the queue
      */
-    function Customer($http, CustomerService) {
+    function Customer($http) {
 
         return {
             restrict: 'E',
@@ -19,6 +19,8 @@
             },
             templateUrl: '/customer/customer.html',
             link: function(scope) {
+
+                // TODO the queued time is not being refreshed so it would be good to do a live update of this value
 
                 // calculate how long the customer has queued for
                 var queuedTime = new Date() - new Date(scope.customer.joinedTime);

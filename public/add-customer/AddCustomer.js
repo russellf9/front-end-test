@@ -3,7 +3,7 @@
         .directive('addCustomer', AddCustomer);
 
 
-    function AddCustomer($http, CustomerService){
+    function AddCustomer($http){
         return {
             restrict: 'E',
             scope:{
@@ -24,15 +24,17 @@
                         console.log('error');
                         // TODO implement error handling
                     } else {
-                        CustomerService.addCustomer(customer);
+                        $http.post('/api/customer/add', customer).then(function(res) {
+                            scope.onAdded()(); // note double parenthesis
+                        });
                     }
                 }
             }
         };
-
     }
 
 
 })();
+
 
 
