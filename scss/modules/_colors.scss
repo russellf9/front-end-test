@@ -1,0 +1,38 @@
+$primaryColor: #eeccff;
+$secondaryColor: #aaaaff;
+
+$backgroundColor: #1abc9c;
+
+$buttonColor: #5bc0de;
+
+
+
+$lightGrey: #444444;
+$darkGrey: #222222;
+$flesh: #ffbcaa;
+$blue: #2222DD;
+$pink: #ff77ff;
+$green: #22CC11;
+$yellow: #FFFF00;
+$red: #FF2233;
+$offWhite: #EEEEEE;
+
+$warning: #e74c3c;
+
+
+$lightGreen : lighten( $green, 40% );
+$darkGreen : darken( $green, 20% );
+$lightBlue : lighten( $blue, 5% );
+$veryLightBlue : lighten( lightBlue, 10% );
+$faintBlue : lighten( $veryLightBlue, 10% );
+$lightYellow : lighten( $yellow, 40% );
+
+$mediumGrey: lighten($lightGrey, 25%);
+$veryLightGrey: lighten($lightGrey, 50%);
+$faintGrey: lighten($lightGrey, 60%);
+
+$dragColor : $green;
+$dragBorderColor : $darkGreen;
+$gameBoardbackground: $faintGrey;
+
+$balanced: $green;

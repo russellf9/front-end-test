@@ -1,0 +1,71 @@
+@import "modules/all";
+
+.center-text {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+}
+
+// `Queue App` specific styles here
+
+.Queue {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 50%;
+  min-width: 500px;
+  padding: 2em;
+  background-color: $veryLightGrey;
+}
+
+$queue-padding: 0.5em;
+
+.queue-list {
+  list-style-type: none;
+  padding-left: $queue-padding;
+  //border: solid 1px $red;
+
+}
+.queue-list li {
+  margin-bottom: 0.5em;
+}
+
+.queue-section {
+  border: solid 1px $lightGrey;
+  margin-bottom: 1em;
+  padding-bottom: $queue-padding;
+  background-color: $faintGrey;
+}
+
+.queue-section h2 {
+  background-color: $mediumGrey;
+  padding: $queue-padding;
+}
+
+
+.Queue-customer-list {
+  @extend .queue-list;
+ // background-color: $lightGrey
+}
+
+.Queue-customer-served-list {
+  @extend .queue-list;
+}
+
+
+.AddCustomer {
+  padding: $queue-padding;
+}
+
+.Customer {
+
+}
+
+
+

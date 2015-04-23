@@ -1,0 +1,8 @@
+/*
+ columns
+ */
+
+// Function to calculate column width
+@function getColumnWidth($width, $columns, $margin) {
+  @return ($width / $columns) - ($margin * 2);
+}

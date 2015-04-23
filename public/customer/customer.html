@@ -1,8 +1,8 @@
 <div class="Customer">
-    <span>{{ customer.name }}</span>
-    <span>{{ customer.product.name }}</span>
-    <span>Status: {{ customer.status || 'queueing' }}</span>
-    <span> - Waiting for: {{queuedTime.hours()}}h {{queuedTime.minutes()}}m</span>
+    <span><strong>{{ customer.name }}</strong></span>
+    <span> - {{ customer.product.name }}</span>
+    <span ng-if="false"> – Status: {{ customer.status || 'queueing' }}</span>
+    <span ng-if="false"> - Waiting for: {{queuedTime.hours()}}h {{queuedTime.minutes()}}m</span>
     <button ng-if="customer.status !== 'served'" ng-click="remove()">Remove</button>
     <button ng-if="customer.status !== 'served'" ng-click="serve()">Serve</button>
 </div>

@@ -1,0 +1,538 @@
+/*special font*/
+@font-face {
+  font-family: 'fredoka_oneregular';
+  src: url("../fonts/fredokaone-regular-webfont.eot");
+  src: url("../fonts/fredokaone-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fredokaone-regular-webfont.woff2") format("woff2"), url("../fonts/fredokaone-regular-webfont.woff") format("woff"), url("../fonts/fredokaone-regular-webfont.ttf") format("truetype"), url("../fonts/fredokaone-regular-webfont.svg#fredoka_oneregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+ columns
+ */
+/* Center both horizontal and vertical */
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-container-all {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-container-multiple {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Center horizontal only */
+.flex-container-horizontal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* multiple - rows */
+.flex-container-multiple-rows {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* You can set flex-wrap and flex-direction individually */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  /* Or do it all in one line with flex flow */
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  /* tweak the where items line up on the row */
+  /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+  -webkit-align-content: space-around;
+      -ms-flex-line-pack: distribute;
+          align-content: space-around;
+}
+
+/* Centers all in a row */
+.flex-container-all-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-container-all-row-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* Centers all in a column */
+.flex-container-all-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #EEEEEE;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: 12px;
+}
+
+/**
+ Reset some fonts
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, sans-serif;
+  color: #222222;
+}
+
+p, li {
+  font-family: Helvetica, sans-serif;
+  color: #222222;
+}
+
+body {
+  font-size: 1rem 1.25rem;
+  background: #EEEEEE;
+}
+
+/**
+
+
+h5 {
+  font-size: ms(1);
+  line-height: ms(1) * $line-height-ratio;
+}
+
+h4 {
+  font-size: ms(2);
+  line-height: ms(2) * $line-height-ratio;
+}
+
+h3 {
+  font-size: ms(3);
+  line-height: ms(3) * $line-height-ratio;
+}
+
+h2 {
+  font-size: ms(4);
+  line-height: ms(4) * $line-height-ratio;
+}
+
+h1 {
+  font-size: ms(5);
+  line-height: ms(5) * $line-height-ratio;
+}
+
+
+p {
+  font-size: 1rem;
+  line-height: 1rem * $line-height-ratio;
+}
+
+**/
+html {
+  font-size: 11px;
+}
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1180px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1750px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 2100px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 2400px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #5bc0de;
+}
+
+.tab-nav a:link {
+  color: #3838e0;
+}
+
+.tab-nav a:visited {
+  color: #3838e0;
+}
+
+.tab-nav a:hover {
+  color: #3838e0;
+}
+
+.tab-nav a:focus {
+  color: #3838e0;
+}
+
+.tab-nav a:active {
+  color: #3838e0;
+}
+
+/*
+ columns
+ */
+/* Center both horizontal and vertical */
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-container-all {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-container-multiple {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Center horizontal only */
+.flex-container-horizontal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* multiple - rows */
+.flex-container-multiple-rows {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* You can set flex-wrap and flex-direction individually */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  /* Or do it all in one line with flex flow */
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  /* tweak the where items line up on the row */
+  /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+  -webkit-align-content: space-around;
+      -ms-flex-line-pack: distribute;
+          align-content: space-around;
+}
+
+/* Centers all in a row */
+.flex-container-all-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-container-all-row-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* Centers all in a column */
+.flex-container-all-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.center-text {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+}
+
+.Queue {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 50%;
+  min-width: 500px;
+  padding: 2em;
+  background-color: #c4c4c4;
+}
+
+.queue-list, .Queue-customer-list, .Queue-customer-served-list {
+  list-style-type: none;
+  padding-left: 0.5em;
+}
+
+.queue-list li, .Queue-customer-list li, .Queue-customer-served-list li {
+  margin-bottom: 0.5em;
+}
+
+.queue-section {
+  border: solid 1px #444444;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  background-color: #dddddd;
+}
+
+.queue-section h2 {
+  background-color: #848484;
+  padding: 0.5em;
+}
+
+.AddCustomer {
+  padding: 0.5em;
+}

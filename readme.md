@@ -49,3 +49,12 @@ App is at 127.0.0.1:1337
 Good luck!
 
 Starting the Code Test now!
+
+
+## Notes
+
+Bonus: I've added a basic SASS styling, to update the CSS file:
+
+``` $ gulp ```
+
+
